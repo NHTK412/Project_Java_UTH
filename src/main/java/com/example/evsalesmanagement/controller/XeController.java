@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
-@RequestMapping("/cars")
+@RequestMapping("/xe")
 public class XeController {
     @Autowired
     private XeService xeService;
