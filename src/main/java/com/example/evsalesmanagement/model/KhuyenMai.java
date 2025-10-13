@@ -137,4 +137,20 @@ public class KhuyenMai {
     public void setTrangThai(String trangThai) {
         this.trangThai = trangThai;
     }
+
+    public List<ChiTietLoaiXe> getChiTietLoaiXes() {
+        return chiTietLoaiXes;
+    }
+
+    public void setChiTietLoaiXes(List<ChiTietLoaiXe> chiTietLoaiXes) {
+        this.chiTietLoaiXes = chiTietLoaiXes;
+    }
+
+    public List<DaiLy> getDaiLys() {
+        return daiLys;
+    }
+
+    public void setDaiLys(List<DaiLy> daiLys) {
+        this.daiLys = daiLys;
+    }
 }
