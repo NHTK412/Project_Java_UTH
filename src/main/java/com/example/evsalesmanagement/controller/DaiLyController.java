@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/daily")
+@RequestMapping("/daiLy")
 public class DaiLyController {
     @Autowired
     private DaiLyService daiLyService;
