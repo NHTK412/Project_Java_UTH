@@ -1,5 +1,6 @@
 package com.example.evsalesmanagement.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,15 @@ public class XeController {
     @PostMapping
     Xe createXe(@RequestBody XeRequest request) {
        return xeService.createXe(request);
+    }
+
+    @PostMapping("/batch")
+    public List<Xe> createXeBatch(@RequestBody List<XeRequest> requests) {
+        List<Xe> result = new ArrayList<>();
+        for (XeRequest req : requests) {
+            result.add(xeService.createXe(req));
+        }
+        return result;
     }
 
     @GetMapping
