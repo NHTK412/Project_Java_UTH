@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.evsalesmanagement.repository.ChiTietLoaiXeRepository;
 import com.example.evsalesmanagement.repository.DaiLyRepository;
 import com.example.evsalesmanagement.repository.XeRepository;
-import com.example.evsalesmanagement.dto.XeRequest;
+import com.example.evsalesmanagement.dto.XeDTO;
 import com.example.evsalesmanagement.model.ChiTietLoaiXe;
 import com.example.evsalesmanagement.model.DaiLy;
 import com.example.evsalesmanagement.model.Xe;
@@ -25,7 +25,7 @@ public class XeService {
     @Autowired
     private ChiTietLoaiXeRepository chiTietLoaiRepository;
 
-    public Xe createXe(XeRequest request) {
+    public Xe createXe(XeDTO request) {
     Xe xe = new Xe();
     xe.setSoKhung(request.getSoKhung());
     xe.setSoMay(request.getSoMay());
@@ -54,7 +54,7 @@ public class XeService {
         return xeRepository.findById(xeId).orElseThrow(() -> new RuntimeException("Không tìm thấy xe với ID: " + xeId));
     }
 
-    public Xe updateXe(Integer xeId, XeRequest request) {
+    public Xe updateXe(Integer xeId, XeDTO request) {
         Xe xe = getXeById(xeId);
         
         xe.setSoKhung(request.getSoKhung());
