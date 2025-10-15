@@ -17,7 +17,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "BaoGia")
-public class BaoGia {
+public class BaoGia extends GhiNhanThoiGian {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaBaoGia")
@@ -26,8 +26,8 @@ public class BaoGia {
     @Column(name = "TongTien")
     private BigDecimal tongTien;
 
-    @Column(name = "NgayTaoPhieu")
-    private LocalDateTime ngayTaoPhieu;
+    // @Column(name = "NgayTaoPhieu")
+    // private LocalDateTime ngayTaoPhieu;
 
     @Column(name = "TrangThai")
     private String trangThai;
@@ -36,8 +36,8 @@ public class BaoGia {
     @JoinColumn(name = "MaDonHang", unique = true)
     private DonHang donHang;
 
-    @OneToMany(mappedBy = "baoGia")
-    private List<ChiTietBaoGia> chiTietBaoGias = new ArrayList<>();
+    // @OneToMany(mappedBy = "baoGia")
+    // private List<ChiTietBaoGia> chiTietBaoGias = new ArrayList<>();
 
     public Integer getMaBaoGia() {
         return maBaoGia;
@@ -55,13 +55,13 @@ public class BaoGia {
         this.tongTien = tongTien;
     }
 
-    public LocalDateTime getNgayTaoPhieu() {
-        return ngayTaoPhieu;
-    }
+    // public LocalDateTime getNgayTaoPhieu() {
+    //     return ngayTaoPhieu;
+    // }
 
-    public void setNgayTaoPhieu(LocalDateTime ngayTaoPhieu) {
-        this.ngayTaoPhieu = ngayTaoPhieu;
-    }
+    // public void setNgayTaoPhieu(LocalDateTime ngayTaoPhieu) {
+    //     this.ngayTaoPhieu = ngayTaoPhieu;
+    // }
 
     public String getTrangThai() {
         return trangThai;

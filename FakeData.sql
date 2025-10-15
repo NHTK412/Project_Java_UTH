@@ -7,28 +7,36 @@ INSERT INTO
         dia_chi,
         so_dien_thoai,
         email,
-        trang_thai
+        trang_thai,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         'VinFast TP.HCM - Quận 1',
         '456 Đường Lê Lợi, Quận 1, TP.HCM',
         '0283-123-4567',
         'tphcm@vinfast.vn',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         'Đại lý phân phối Quận 1',
         '456 Đường Lê Lợi, Quận 1, TP.HCM',
         '0283-123-4567',
         'dailyquan1@vinfast.vn',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         'Đại lý phân phối Quận 10',
         '789 Đường Sư Vạn Hạnh, Quận 10, TP.HCM',
         '0283-456-7890',
         'dailyquan10@vinfast.vn',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT NHAN_VIEN ==========
@@ -41,7 +49,9 @@ INSERT INTO
         email,
         dia_chi,
         chuc_vu,
-        ma_dai_ly
+        ma_dai_ly,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         'Nguyễn Văn An',
@@ -51,7 +61,9 @@ VALUES (
         'an.nguyen@vinfast.vn',
         'TP.HCM',
         'Giám đốc hãng xe',
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'Trần Thị Bích',
@@ -61,7 +73,9 @@ VALUES (
         'bich.tran@vinfast.vn',
         'TP.HCM',
         'Nhân viên hãng xe',
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'Lê Minh Tuấn',
@@ -71,7 +85,9 @@ VALUES (
         'tuan.le@vinfast.vn',
         'TP.HCM',
         'Quản lý đại lý',
-        2
+        2,
+        NOW(),
+        NOW()
     ),
     (
         'Phạm Văn Hùng',
@@ -81,7 +97,9 @@ VALUES (
         'hung.pham@vinfast.vn',
         'TP.HCM',
         'Nhân viên đại lý',
-        2
+        2,
+        NOW(),
+        NOW()
     ),
     (
         'Võ Thị Hương',
@@ -91,7 +109,9 @@ VALUES (
         'huong.vo@vinfast.vn',
         'TP.HCM',
         'Quản lý đại lý',
-        3
+        3,
+        NOW(),
+        NOW()
     ),
     (
         'Đặng Quốc Huy',
@@ -101,7 +121,9 @@ VALUES (
         'huy.dang@vinfast.vn',
         'TP.HCM',
         'Nhân viên đại lý',
-        3
+        3,
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT TAI_KHOAN ==========
@@ -113,7 +135,8 @@ INSERT INTO
         trang_thai,
         ngay_tao,
         lan_dang_nhap_cuoi,
-        ma_nhan_vien
+        ma_nhan_vien,
+        ngay_cap_nhat
     )
 VALUES (
         'an.nguyen',
@@ -122,7 +145,8 @@ VALUES (
         'Hoạt động',
         NOW(),
         NOW(),
-        1
+        1,
+        NOW()
     ),
     (
         'bich.tran',
@@ -131,7 +155,8 @@ VALUES (
         'Hoạt động',
         NOW(),
         NOW(),
-        2
+        2,
+        NOW()
     ),
     (
         'tuan.le',
@@ -140,7 +165,8 @@ VALUES (
         'Hoạt động',
         NOW(),
         NOW(),
-        3
+        3,
+        NOW()
     ),
     (
         'hung.pham',
@@ -149,7 +175,8 @@ VALUES (
         'Hoạt động',
         NOW(),
         NOW(),
-        4
+        4,
+        NOW()
     ),
     (
         'huong.vo',
@@ -158,7 +185,8 @@ VALUES (
         'Hoạt động',
         NOW(),
         NOW(),
-        5
+        5,
+        NOW()
     ),
     (
         'huy.dang',
@@ -167,7 +195,8 @@ VALUES (
         'Hoạt động',
         NOW(),
         NOW(),
-        6
+        6,
+        NOW()
     );
 
 -- ========== INSERT KHACH_HANG ==========
@@ -180,7 +209,8 @@ INSERT INTO
         email,
         dia_chi,
         hang_thanh_vien,
-        ngay_tao
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         'Phan Minh Đức',
@@ -190,6 +220,7 @@ VALUES (
         'minh.duc@email.com',
         '100 Phố Huế, Hà Nội',
         'VIP',
+        NOW(),
         NOW()
     ),
     (
@@ -200,6 +231,7 @@ VALUES (
         'thu.huong@email.com',
         '50 Nguyễn Huệ, TP.HCM',
         'Thường',
+        NOW(),
         NOW()
     ),
     (
@@ -210,6 +242,7 @@ VALUES (
         'khac.hung@email.com',
         '200 Lê Văn Sỹ, TP.HCM',
         'Thường',
+        NOW(),
         NOW()
     ),
     (
@@ -220,6 +253,7 @@ VALUES (
         'mong.nhi@email.com',
         '30 Bà Triệu, Hà Nội',
         'VIP',
+        NOW(),
         NOW()
     ),
     (
@@ -230,24 +264,41 @@ VALUES (
         'tan.tai@email.com',
         '150 Cộng Hòa, TP.HCM',
         'Thường',
+        NOW(),
         NOW()
     );
 
 -- ========== INSERT DANH_MUC_XE ==========
 INSERT INTO
-    danh_muc_xe (ten_danh_muc, mo_ta)
+    danh_muc_xe (
+        ten_danh_muc,
+        mo_ta,
+        ngay_tao,
+        ngay_cap_nhat
+    )
 VALUES (
         'Sedan',
-        'Xe sedan 4-5 chỗ ngồi'
+        'Xe sedan 4-5 chỗ ngồi',
+        NOW(),
+        NOW()
     ),
-    ('SUV', 'Xe SUV dã ngoại'),
+    (
+        'SUV',
+        'Xe SUV dã ngoại',
+        NOW(),
+        NOW()
+    ),
     (
         'Minivan',
-        'Xe gia đình đa dụng'
+        'Xe gia đình đa dụng',
+        NOW(),
+        NOW()
     ),
     (
         'Bán tải',
-        'Xe bán tải tiện dụng'
+        'Xe bán tải tiện dụng',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT LOAI_XE ==========
@@ -255,37 +306,51 @@ INSERT INTO
     loai_xe (
         ten_loai_xe,
         nam_san_xuat,
-        mo_ta
+        mo_ta,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         'VinFast VF e34',
         2023,
-        'SUV điện 5 chỗ thông minh'
+        'SUV điện 5 chỗ thông minh',
+        NOW(),
+        NOW()
     ),
     (
         'VinFast VF 8',
         2023,
-        'SUV điện cao cấp 5 chỗ'
+        'SUV điện cao cấp 5 chỗ',
+        NOW(),
+        NOW()
     ),
     (
         'VinFast VF 9',
         2023,
-        'SUV điện hạng sang 7 chỗ'
+        'SUV điện hạng sang 7 chỗ',
+        NOW(),
+        NOW()
     ),
     (
         'VinFast VF 5',
         2023,
-        'SUV điện nhỏ gọn đô thị'
+        'SUV điện nhỏ gọn đô thị',
+        NOW(),
+        NOW()
     ),
     (
         'VinFast Lux A2.0',
         2023,
-        'Sedan hạng sang động cơ xăng'
+        'Sedan hạng sang động cơ xăng',
+        NOW(),
+        NOW()
     ),
     (
         'VinFast Lux SA2.0',
         2023,
-        'SUV hạng sang 7 chỗ động cơ xăng'
+        'SUV hạng sang 7 chỗ động cơ xăng',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT CHI_TIET_LOAI_XE ==========
@@ -296,7 +361,9 @@ INSERT INTO
         mau_sac,
         phien_ban,
         tinh_nang,
-        gia_ban
+        gia_ban,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         1,
@@ -304,7 +371,9 @@ VALUES (
         'Trắng',
         'Eco',
         'ABS, Túi khí, Điều hòa, Camera lùi',
-        690000000
+        690000000,
+        NOW(),
+        NOW()
     ),
     (
         1,
@@ -312,7 +381,9 @@ VALUES (
         'Xanh',
         'Plus',
         'ABS, Túi khí x6, Điều hòa, Camera 360, Cảm biến',
-        760000000
+        760000000,
+        NOW(),
+        NOW()
     ),
     (
         2,
@@ -320,7 +391,9 @@ VALUES (
         'Đen',
         'Eco',
         'ABS, Túi khí x8, Điều hòa, Camera 360',
-        1200000000
+        1200000000,
+        NOW(),
+        NOW()
     ),
     (
         2,
@@ -328,7 +401,9 @@ VALUES (
         'Xám',
         'Plus',
         'ABS, Túi khí x11, Điều hòa, Camera 360, ADAS Level 2',
-        1450000000
+        1450000000,
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -336,7 +411,9 @@ VALUES (
         'Đen',
         'Eco',
         'ABS, Túi khí x11, Điều hòa, 7 chỗ, Camera 360',
-        1500000000
+        1500000000,
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -344,7 +421,9 @@ VALUES (
         'Trắng',
         'Plus',
         'ABS, Túi khí x11, Điều hòa, 7 chỗ, ADAS Level 2',
-        1650000000
+        1650000000,
+        NOW(),
+        NOW()
     ),
     (
         4,
@@ -352,7 +431,9 @@ VALUES (
         'Đỏ',
         'Base',
         'ABS, Túi khí, Điều hòa',
-        458000000
+        458000000,
+        NOW(),
+        NOW()
     ),
     (
         4,
@@ -360,7 +441,9 @@ VALUES (
         'Xanh',
         'Plus',
         'ABS, Túi khí x6, Điều hòa, Camera 360',
-        550000000
+        550000000,
+        NOW(),
+        NOW()
     ),
     (
         5,
@@ -368,7 +451,9 @@ VALUES (
         'Đen',
         'Tiêu chuẩn',
         'ABS, Túi khí x8, Điều hòa, Nội thất da',
-        1080000000
+        1080000000,
+        NOW(),
+        NOW()
     ),
     (
         5,
@@ -376,7 +461,9 @@ VALUES (
         'Trắng',
         'Cao cấp',
         'ABS, Túi khí x9, Điều hòa, Nội thất da cao cấp',
-        1200000000
+        1200000000,
+        NOW(),
+        NOW()
     ),
     (
         6,
@@ -384,7 +471,9 @@ VALUES (
         'Bạc',
         'Tiêu chuẩn',
         'ABS, Túi khí x8, Điều hòa, 7 chỗ',
-        1580000000
+        1580000000,
+        NOW(),
+        NOW()
     ),
     (
         6,
@@ -392,7 +481,9 @@ VALUES (
         'Đen',
         'Cao cấp',
         'ABS, Túi khí x11, Điều hòa, 7 chỗ, Nội thất da',
-        1688000000
+        1688000000,
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT XE ==========
@@ -404,7 +495,9 @@ INSERT INTO
         trang_thai,
         tinh_trang_xe,
         ma_chi_tiet_loai_xe,
-        ma_dai_ly
+        ma_dai_ly,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         'VIN001',
@@ -412,7 +505,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         1,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'VIN002',
@@ -420,7 +515,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         2,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'VIN003',
@@ -428,7 +525,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         3,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'VIN004',
@@ -436,7 +535,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         4,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'VIN005',
@@ -444,7 +545,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         5,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'VIN006',
@@ -452,7 +555,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         6,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'VIN007',
@@ -460,7 +565,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         7,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'VIN008',
@@ -468,7 +575,9 @@ VALUES (
         'CHUA_BAN',
         'Mới',
         8,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     -- Xe đã bán cho đại lý 2
     (
@@ -477,7 +586,9 @@ VALUES (
         'DA_BAN',
         'Mới',
         1,
-        2
+        2,
+        NOW(),
+        NOW()
     ),
     (
         'VIN010',
@@ -485,7 +596,9 @@ VALUES (
         'DA_BAN',
         'Mới',
         3,
-        2
+        2,
+        NOW(),
+        NOW()
     ),
     -- Xe đã bán cho đại lý 3
     (
@@ -494,7 +607,9 @@ VALUES (
         'DA_BAN',
         'Mới',
         7,
-        3
+        3,
+        NOW(),
+        NOW()
     ),
     (
         'VIN012',
@@ -502,7 +617,9 @@ VALUES (
         'DA_BAN',
         'Mới',
         9,
-        3
+        3,
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT KHUYEN_MAI ==========
@@ -516,7 +633,9 @@ INSERT INTO
         phan_tram_giam,
         ngay_bat_dau,
         ngay_het_han,
-        trang_thai
+        trang_thai,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         'Ưu đãi VF e34',
@@ -527,7 +646,9 @@ VALUES (
         NULL,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         'Khuyến mãi bán sỉ',
@@ -538,7 +659,9 @@ VALUES (
         5.00,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         'Tặng pin dự phòng',
@@ -549,7 +672,9 @@ VALUES (
         NULL,
         '2024-06-01',
         '2024-08-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT BAO_GIA ==========
@@ -558,39 +683,45 @@ INSERT INTO
     bao_gia (
         ma_don_hang,
         tong_tien,
-        ngay_tao_phieu,
-        trang_thai
+        ngay_tao,
+        trang_thai,
+        ngay_cap_nhat
     )
 VALUES (
         NULL,
         720000000,
-        '2024-01-08 10:00:00',
-        'Chờ duyệt'
+        NOW(),
+        'Chờ duyệt',
+        NOW()
     ),
     (
         NULL,
         1250000000,
-        '2024-01-12 14:30:00',
-        'Chờ duyệt'
+        NOW(),
+        'Chờ duyệt',
+        NOW()
     ),
     -- Báo giá đã chốt thành đơn
     (
         NULL,
         760000000,
-        '2024-01-15 09:00:00',
-        'Đã duyệt'
+        NOW(),
+        'Đã duyệt',
+        NOW()
     ),
     (
         NULL,
         1200000000,
-        '2024-02-10 11:00:00',
-        'Đã duyệt'
+        NOW(),
+        'Đã duyệt',
+        NOW()
     ),
     (
         NULL,
         2800000000,
-        '2024-02-18 15:30:00',
-        'Đã duyệt'
+        NOW(),
+        'Đã duyệt',
+        NOW()
     );
 
 -- ========== INSERT CHI_TIET_BAO_GIA ==========
@@ -609,7 +740,9 @@ INSERT INTO
         phi_dich_vu_dang_ky_xe,
         phan_tram_chiet_khau,
         gia_si,
-        tong_tien
+        tong_tien,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES
     -- Báo giá 1 (chưa chốt)
@@ -627,7 +760,9 @@ VALUES
         1000000,
         0,
         0,
-        772055000
+        772055000,
+        NOW(),
+        NOW()
     ),
     -- Báo giá 2 (chưa chốt)
     (
@@ -644,7 +779,9 @@ VALUES
         1000000,
         0,
         0,
-        1466055000
+        1466055000,
+        NOW(),
+        NOW()
     ),
     -- Báo giá 3 (đã chốt - khách lẻ)
     (
@@ -661,7 +798,9 @@ VALUES
         1000000,
         0,
         0,
-        772055000
+        772055000,
+        NOW(),
+        NOW()
     ),
     -- Báo giá 4 (đã chốt - bán sỉ cho đại lý)
     (
@@ -678,7 +817,9 @@ VALUES
         0,
         5,
         1100000000,
-        2090000000
+        2090000000,
+        NOW(),
+        NOW()
     ),
     -- Báo giá 5 (đã chốt - bán sỉ cho đại lý)
     (
@@ -695,7 +836,9 @@ VALUES
         0,
         3,
         420000000,
-        814800000
+        814800000,
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT DON_HANG ==========
@@ -709,38 +852,42 @@ INSERT INTO
         tong_tien_don_hang,
         ma_khach_hang,
         ma_nhan_vien,
-        ma_dai_ly
+        ma_dai_ly,
+        ngay_cap_nhat
     )
 VALUES (
         'HĐ001/2024',
-        '2024-01-15 09:30:00',
+        NOW(),
         'Hoàn thành',
         'Khách mua xe VF e34 Plus',
         772055000,
         2,
         1,
-        NULL
+        NULL,
+        NOW()
     ),
     -- Đơn bán sỉ cho đại lý (ma_khach_hang = NULL, ma_dai_ly có giá trị)
     (
         'HĐ002/2024',
-        '2024-02-10 14:00:00',
+        NOW(),
         'Hoàn thành',
         'Phân phối 2 xe VF 8 cho đại lý Quận 1',
         2090000000,
         NULL,
         1,
-        2
+        2,
+        NOW()
     ),
     (
         'HĐ003/2024',
-        '2024-02-20 10:30:00',
+        NOW(),
         'Hoàn thành',
         'Phân phối 2 xe VF 5 cho đại lý Quận 10',
         814800000,
         NULL,
         2,
-        3
+        3,
+        NOW()
     );
 
 -- Cập nhật ma_don_hang cho các báo giá đã chốt
@@ -761,7 +908,9 @@ INSERT INTO
         ngay_den_han,
         ngay_thanh_toan,
         tien_phat,
-        trang_thai
+        trang_thai,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES
     -- Thanh toán cho đơn bán lẻ
@@ -774,7 +923,9 @@ VALUES
         '2024-02-15',
         '2024-02-14',
         0,
-        'Đã thanh toán'
+        'Đã thanh toán',
+        NOW(),
+        NOW()
     ),
     (
         1,
@@ -785,7 +936,9 @@ VALUES
         '2024-03-15',
         NULL,
         0,
-        'Chưa thanh toán'
+        'Chưa thanh toán',
+        NOW(),
+        NOW()
     ),
     -- Thanh toán cho đơn bán sỉ
     (
@@ -797,7 +950,9 @@ VALUES
         '2024-03-10',
         '2024-03-08',
         0,
-        'Đã thanh toán'
+        'Đã thanh toán',
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -808,18 +963,21 @@ VALUES
         '2024-03-20',
         '2024-03-18',
         0,
-        'Đã thanh toán'
+        'Đã thanh toán',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT GIAO_XE ==========
 INSERT INTO
     giao_xe (
         ma_don_hang,
-        ngay_tao_don,
+        ngay_tao,
         ngay_du_kien_giao_xe,
         ngay_giao_xe,
         trang_thai,
-        ma_nhan_vien
+        ma_nhan_vien,
+        ngay_cap_nhat
     )
 VALUES (
         1,
@@ -827,7 +985,8 @@ VALUES (
         '2024-02-05',
         '2024-02-05',
         'Hoàn thành',
-        1
+        1,
+        '2024-01-15 09:30:00'
     ),
     (
         2,
@@ -835,7 +994,8 @@ VALUES (
         '2024-02-25',
         '2024-02-25',
         'Hoàn thành',
-        1
+        1,
+        '2024-02-10 14:00:00'
     ),
     (
         3,
@@ -843,7 +1003,8 @@ VALUES (
         '2024-03-05',
         '2024-03-05',
         'Hoàn thành',
-        2
+        2,
+        '2024-02-20 10:30:00'
     );
 
 -- ========== INSERT PHAN_HOI ==========
@@ -852,29 +1013,33 @@ INSERT INTO
         ma_khach_hang,
         tieu_de_phan_hoi,
         noi_dung_phan_hoi,
-        thoi_gian,
-        trang_thai
+        ngay_tao,
+        trang_thai,
+        ngay_cap_nhat
     )
 VALUES (
         2,
         'Hài lòng với xe VF e34',
         'Xe chạy êm, tiết kiệm pin, đội ngũ giao xe chuyên nghiệp',
         '2024-02-07',
-        'Đã xử lý'
+        'Đã xử lý',
+        '2024-02-07'
     ),
     (
         1,
         'Hỏi về trạm sạc',
         'Muốn biết địa điểm trạm sạc gần nhà',
         '2024-02-15',
-        'Đã xử lý'
+        'Đã xử lý',
+        '2024-02-07'
     ),
     (
         4,
         'Tư vấn mua xe',
         'Quan tâm đến xe VF 8',
         '2024-02-20',
-        'Chưa xử lý'
+        'Chưa xử lý',
+        '2024-02-07'
     );
 
 -- ========== INSERT XU_LY_PHAN_HOI ==========
@@ -883,9 +1048,10 @@ INSERT INTO
         ma_phan_hoi,
         noi_dung_xu_ly,
         hinh_thuc_giai_quyet,
-        thoi_gian,
+        ngay_tao,
         trang_thai,
-        ma_nhan_vien
+        ma_nhan_vien,
+        ngay_cap_nhat
     )
 VALUES (
         1,
@@ -893,7 +1059,8 @@ VALUES (
         'Điện thoại',
         '2024-02-07 15:00:00',
         'Hoàn thành',
-        1
+        1,
+        '2024-02-07 15:00:00'
     ),
     (
         2,
@@ -901,7 +1068,8 @@ VALUES (
         'Email',
         '2024-02-15 10:30:00',
         'Hoàn thành',
-        2
+        2,
+        '2024-02-15 10:30:00'
     );
 
 -- ========== INSERT LICH_HEN_LAI_THU ==========
@@ -910,25 +1078,33 @@ INSERT INTO
         ma_khach_hang,
         ma_xe,
         ngay_hen,
-        gio_hen
+        gio_hen,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         1,
         3,
         '2024-02-25',
-        '10:00:00'
+        '10:00:00',
+        NOW(),
+        NOW()
     ),
     (
         4,
         4,
         '2024-02-28',
-        '14:30:00'
+        '14:30:00',
+        NOW(),
+        NOW()
     ),
     (
         5,
         5,
         '2024-03-05',
-        '09:00:00'
+        '09:00:00',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT GIA_SI_DAI_LY ==========
@@ -940,7 +1116,9 @@ INSERT INTO
         so_luong_toi_thieu,
         ngay_ap_dung,
         ngay_ket_thuc,
-        trang_thai
+        trang_thai,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         2,
@@ -949,7 +1127,9 @@ VALUES (
         1,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         2,
@@ -958,7 +1138,9 @@ VALUES (
         1,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         2,
@@ -967,7 +1149,9 @@ VALUES (
         1,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -976,7 +1160,9 @@ VALUES (
         1,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -985,7 +1171,9 @@ VALUES (
         1,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -994,7 +1182,9 @@ VALUES (
         1,
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT CHINH_SACH_CHIET_KHAU ==========
@@ -1006,7 +1196,9 @@ INSERT INTO
         dieu_kien_ap_dung,
         ngay_bat_dau,
         ngay_ket_thuc,
-        trang_thai
+        trang_thai,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         2,
@@ -1015,7 +1207,9 @@ VALUES (
         'Mua từ 2-5 xe',
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         2,
@@ -1024,7 +1218,9 @@ VALUES (
         'Mua từ 6-10 xe',
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -1033,7 +1229,9 @@ VALUES (
         'Mua từ 2-4 xe',
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     ),
     (
         3,
@@ -1042,7 +1240,9 @@ VALUES (
         'Doanh số từ 5 tỷ',
         '2024-01-01',
         '2024-12-31',
-        'Hoạt động'
+        'Hoạt động',
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT BAC_CHIET_KHAU_SO_LUONG ==========
@@ -1051,13 +1251,22 @@ INSERT INTO
         ma_chinh_sach,
         so_luong_tu,
         so_luong_den,
-        phan_tram_chiet_khau
+        phan_tram_chiet_khau,
+        ngay_tao,
+        ngay_cap_nhat
     )
-VALUES (1, 2, 5, 5.00),
-    (1, 6, 10, 7.50),
-    (1, 11, 20, 10.00),
-    (3, 2, 4, 3.00),
-    (3, 5, 10, 5.00);
+VALUES (1, 2, 5, 5.00, NOW(), NOW()),
+    (1, 6, 10, 7.50, NOW(), NOW()),
+    (
+        1,
+        11,
+        20,
+        10.00,
+        NOW(),
+        NOW()
+    ),
+    (3, 2, 4, 3.00, NOW(), NOW()),
+    (3, 5, 10, 5.00, NOW(), NOW());
 
 -- ========== INSERT BAC_CHIET_KHAU_DOANH_SO ==========
 INSERT INTO
@@ -1065,11 +1274,20 @@ INSERT INTO
         ma_chinh_sach,
         doanh_so_tu,
         doanh_so_den,
-        phan_tram_chiet_khau
+        phan_tram_chiet_khau,
+        ngay_tao,
+        ngay_cap_nhat
     )
-VALUES (4, 5, 10, 6.00),
-    (4, 11, 20, 8.00),
-    (4, 21, 50, 10.00);
+VALUES (4, 5, 10, 6.00, NOW(), NOW()),
+    (4, 11, 20, 8.00, NOW(), NOW()),
+    (
+        4,
+        21,
+        50,
+        10.00,
+        NOW(),
+        NOW()
+    );
 
 -- ========== INSERT PHIEU_XUAT_KHO ==========
 INSERT INTO
@@ -1078,38 +1296,51 @@ INSERT INTO
         ngay_xuat,
         tong_tien,
         ghi_chu,
-        ma_nhan_vien
+        ma_nhan_vien,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         1,
         '2024-02-05 09:00:00',
         760000000,
         'Xuất xe VF e34 Plus cho khách lẻ',
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         2,
         '2024-02-25 10:30:00',
         2400000000,
         'Xuất 2 xe VF 8 cho đại lý Quận 1',
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         3,
         '2024-03-05 14:00:00',
         916000000,
         'Xuất 2 xe VF 5 cho đại lý Quận 10',
-        2
+        2,
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT CHI_TIET_PHIEU_XUAT ==========
 INSERT INTO
-    chi_tiet_phieu_xuat (ma_phieu_xuat, ma_xe)
-VALUES (1, 2),
-    (2, 9),
-    (2, 10),
-    (3, 11),
-    (3, 12);
+    chi_tiet_phieu_xuat (
+        ma_phieu_xuat,
+        ma_xe,
+        ngay_tao,
+        ngay_cap_nhat
+    )
+VALUES (1, 2, NOW(), NOW()),
+    (2, 9, NOW(), NOW()),
+    (2, 10, NOW(), NOW()),
+    (3, 11, NOW(), NOW()),
+    (3, 12, NOW(), NOW());
 
 -- ========== INSERT PHIEU_NHAP_KHO ==========
 INSERT INTO
@@ -1119,7 +1350,9 @@ INSERT INTO
         tong_tien,
         ghi_chu,
         ma_nhan_vien,
-        ma_dai_ly
+        ma_dai_ly,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         '2024-01-05 08:00:00',
@@ -1127,7 +1360,9 @@ VALUES (
         1450000000,
         'Nhập 2 xe VF e34',
         1,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         '2024-01-10 10:00:00',
@@ -1135,7 +1370,9 @@ VALUES (
         2650000000,
         'Nhập 2 xe VF 8',
         1,
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         '2024-01-15 09:00:00',
@@ -1143,40 +1380,55 @@ VALUES (
         916000000,
         'Nhập 2 xe VF 5',
         2,
-        1
+        1,
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT CHI_TIET_PHIEU_NHAP ==========
 INSERT INTO
-    chi_tiet_phieu_nhap (ma_phieu_nhap, ma_xe)
-VALUES (1, 1),
-    (1, 2),
-    (2, 3),
-    (2, 4),
-    (3, 7),
-    (3, 8);
+    chi_tiet_phieu_nhap (
+        ma_phieu_nhap,
+        ma_xe,
+        ngay_tao,
+        ngay_cap_nhat
+    )
+VALUES (1, 1, NOW(), NOW()),
+    (1, 2, NOW(), NOW()),
+    (2, 3, NOW(), NOW()),
+    (2, 4, NOW(), NOW()),
+    (3, 7, NOW(), NOW()),
+    (3, 8, NOW(), NOW());
 
 -- ========== INSERT YEU_CAU_NHAP_HANG ==========
 INSERT INTO
     yeu_cau_nhap_hang (
         trang_thai,
         ghi_chu,
-        ma_nhan_vien
+        ma_nhan_vien,
+        ngay_tao,
+        ngay_cap_nhat
     )
 VALUES (
         'Hoàn thành',
         'Yêu cầu nhập thêm xe VF e34 để phân phối',
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'Hoàn thành',
         'Yêu cầu nhập xe VF 8 cho kho',
-        1
+        1,
+        NOW(),
+        NOW()
     ),
     (
         'Chờ duyệt',
         'Yêu cầu nhập xe VF 9 mới',
-        2
+        2,
+        NOW(),
+        NOW()
     );
 
 -- ========== INSERT CHI_TIET_YEU_CAU ==========
@@ -1184,11 +1436,13 @@ INSERT INTO
     chi_tiet_yeu_cau (
         ma_yeu_cau,
         ma_chi_tiet_loai_xe,
-        so_luong
+        so_luong,
+        ngay_tao,
+        ngay_cap_nhat
     )
-VALUES (1, 1, 3),
-    (1, 2, 2),
-    (2, 3, 2),
-    (2, 4, 1),
-    (3, 5, 2),
-    (3, 6, 1);
+VALUES (1, 1, 3, NOW(), NOW()),
+    (1, 2, 2, NOW(), NOW()),
+    (2, 3, 2, NOW(), NOW()),
+    (2, 4, 1, NOW(), NOW()),
+    (3, 5, 2, NOW(), NOW()),
+    (3, 6, 1, NOW(), NOW());

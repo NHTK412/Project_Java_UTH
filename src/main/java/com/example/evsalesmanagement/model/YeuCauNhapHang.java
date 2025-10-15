@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "YeuCauNhapHang")
-public class YeuCauNhapHang {
+public class YeuCauNhapHang extends GhiNhanThoiGian {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaYeuCau")
@@ -31,8 +31,8 @@ public class YeuCauNhapHang {
     @JoinColumn(name = "MaNhanVien")
     private NhanVien nhanVien;
 
-    @OneToMany(mappedBy = "yeuCauNhapHang")
-    private List<ChiTietYeuCau> chiTietYeuCaus = new ArrayList<>();
+    // @OneToMany(mappedBy = "yeuCauNhapHang")
+    // private List<ChiTietYeuCau> chiTietYeuCaus = new ArrayList<>();
 
     public Integer getMaYeuCau() {
         return maYeuCau;

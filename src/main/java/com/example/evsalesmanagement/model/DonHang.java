@@ -18,7 +18,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "DonHang")
-public class DonHang {
+public class DonHang extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaDonHang")
@@ -27,8 +27,8 @@ public class DonHang {
     @Column(name = "SoHopDong")
     private String soHopDong;
 
-    @Column(name = "NgayTao")
-    private LocalDateTime ngayTao;
+    // @Column(name = "NgayTao")
+    // private LocalDateTime ngayTao;
 
     @Column(name = "TrangThai")
     private String trangThai;
@@ -51,17 +51,17 @@ public class DonHang {
     @JoinColumn(name = "MaDaiLy")
     private DaiLy daiLy;
 
-    @OneToOne(mappedBy = "donHang")
-    private BaoGia baoGia;
+    // @OneToOne(mappedBy = "donHang")
+    // private BaoGia baoGia;
 
-    @OneToMany(mappedBy = "donHang")
-    private List<ThanhToan> thanhToans = new ArrayList<>();
+    // @OneToMany(mappedBy = "donHang")
+    // private List<ThanhToan> thanhToans = new ArrayList<>();
 
-    @OneToOne(mappedBy = "donHang")
-    private GiaoXe giaoXe;
+    // @OneToOne(mappedBy = "donHang")
+    // private GiaoXe giaoXe;
 
-    @OneToOne(mappedBy = "donHang")
-    private PhieuXuatKho phieuXuatKho;
+    // @OneToOne(mappedBy = "donHang")
+    // private PhieuXuatKho phieuXuatKho;
 
     public Integer getMaDonHang() {
         return maDonHang;
@@ -79,13 +79,13 @@ public class DonHang {
         this.soHopDong = soHopDong;
     }
 
-    public LocalDateTime getNgayTao() {
-        return ngayTao;
-    }
+    // public LocalDateTime getNgayTao() {
+    //     return ngayTao;
+    // }
 
-    public void setNgayTao(LocalDateTime ngayTao) {
-        this.ngayTao = ngayTao;
-    }
+    // public void setNgayTao(LocalDateTime ngayTao) {
+    //     this.ngayTao = ngayTao;
+    // }
 
     public String getTrangThai() {
         return trangThai;
@@ -135,35 +135,35 @@ public class DonHang {
         this.daiLy = daiLy;
     }
 
-    public BaoGia getBaoGia() {
-        return baoGia;
-    }
+    // public BaoGia getBaoGia() {
+    // return baoGia;
+    // }
 
-    public void setBaoGia(BaoGia baoGia) {
-        this.baoGia = baoGia;
-    }
+    // public void setBaoGia(BaoGia baoGia) {
+    // this.baoGia = baoGia;
+    // }
 
-    public List<ThanhToan> getThanhToans() {
-        return thanhToans;
-    }
+    // public List<ThanhToan> getThanhToans() {
+    // return thanhToans;
+    // }
 
-    public void setThanhToans(List<ThanhToan> thanhToans) {
-        this.thanhToans = thanhToans;
-    }
+    // public void setThanhToans(List<ThanhToan> thanhToans) {
+    // this.thanhToans = thanhToans;
+    // }
 
-    public GiaoXe getGiaoXe() {
-        return giaoXe;
-    }
+    // public GiaoXe getGiaoXe() {
+    // return giaoXe;
+    // }
 
-    public void setGiaoXe(GiaoXe giaoXe) {
-        this.giaoXe = giaoXe;
-    }
+    // public void setGiaoXe(GiaoXe giaoXe) {
+    // this.giaoXe = giaoXe;
+    // }
 
-    public PhieuXuatKho getPhieuXuatKho() {
-        return phieuXuatKho;
-    }
+    // public PhieuXuatKho getPhieuXuatKho() {
+    // return phieuXuatKho;
+    // }
 
-    public void setPhieuXuatKho(PhieuXuatKho phieuXuatKho) {
-        this.phieuXuatKho = phieuXuatKho;
-    }
+    // public void setPhieuXuatKho(PhieuXuatKho phieuXuatKho) {
+    // this.phieuXuatKho = phieuXuatKho;
+    // }
 }
