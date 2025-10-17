@@ -124,46 +124,5 @@ public class ChiTietLoaiXe extends GhiNhanThoiGian{
         this.hinhAnhXe = hinhAnhXe;
     }
 
-<<<<<<< HEAD
-    public List<Xe> getXes() {
-        return xes;
-    }
 
-    public void setXes(List<Xe> xes) {
-        this.xes = xes;
-    }
-
-    public List<ChiTietBaoGia> getChiTietBaoGias() {
-        return chiTietBaoGias;
-    }
-
-    public void setChiTietBaoGias(List<ChiTietBaoGia> chiTietBaoGias) {
-        this.chiTietBaoGias = chiTietBaoGias;
-    }
-
-    public List<KhuyenMai> getKhuyenMais() {
-        return khuyenMais;
-    }
-
-    public void setKhuyenMais(List<KhuyenMai> khuyenMais) {
-        this.khuyenMais = khuyenMais;
-    }
-
-    public List<GiaSiDaiLy> getGiaSiDaiLys() {
-        return giaSiDaiLys;
-    }
-
-    public void setGiaSiDaiLys(List<GiaSiDaiLy> giaSiDaiLys) {
-        this.giaSiDaiLys = giaSiDaiLys;
-    }
-
-    public List<ChiTietYeuCau> getChiTietYeuCaus() {
-        return chiTietYeuCaus;
-    }
-
-    public void setChiTietYeuCaus(List<ChiTietYeuCau> chiTietYeuCaus) {
-        this.chiTietYeuCaus = chiTietYeuCaus;
-    }
-=======
->>>>>>> origin/master
 }
