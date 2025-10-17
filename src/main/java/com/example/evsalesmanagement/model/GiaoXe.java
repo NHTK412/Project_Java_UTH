@@ -14,14 +14,14 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "GiaoXe")
-public class GiaoXe {
+public class GiaoXe extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaDonGiaoXe")
     private Integer maDonGiaoXe;
 
-    @Column(name = "NgayTaoDon")
-    private LocalDateTime ngayTaoDon;
+    // @Column(name = "NgayTaoDon")
+    // private LocalDateTime ngayTaoDon;
 
     @Column(name = "NgayDuKienGiaoXe")
     private LocalDateTime ngayDuKienGiaoXe;
@@ -48,13 +48,13 @@ public class GiaoXe {
         this.maDonGiaoXe = maDonGiaoXe;
     }
 
-    public LocalDateTime getNgayTaoDon() {
-        return ngayTaoDon;
-    }
+    // public LocalDateTime getNgayTaoDon() {
+    //     return ngayTaoDon;
+    // }
 
-    public void setNgayTaoDon(LocalDateTime ngayTaoDon) {
-        this.ngayTaoDon = ngayTaoDon;
-    }
+    // public void setNgayTaoDon(LocalDateTime ngayTaoDon) {
+    //     this.ngayTaoDon = ngayTaoDon;
+    // }
 
     public LocalDateTime getNgayDuKienGiaoXe() {
         return ngayDuKienGiaoXe;

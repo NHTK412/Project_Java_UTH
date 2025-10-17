@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "DanhMucXe")
-public class DanhMucXe {
+public class DanhMucXe extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaDanhMucXe")

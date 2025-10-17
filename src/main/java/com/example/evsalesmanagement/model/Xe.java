@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Xe")
-public class Xe {
+public class Xe extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaXe")
@@ -41,14 +41,14 @@ public class Xe {
     @JoinColumn(name = "MaDaiLy")
     private DaiLy daiLy;
 
-    @OneToMany(mappedBy = "xe")
-    private List<LichHenLaiThu> lichHenLaiThus = new ArrayList<>();
+    // @OneToMany(mappedBy = "xe")
+    // private List<LichHenLaiThu> lichHenLaiThus = new ArrayList<>();
 
-    @OneToMany(mappedBy = "xe")
-    private List<ChiTietPhieuXuat> chiTietPhieuXuats = new ArrayList<>();
+    // @OneToMany(mappedBy = "xe")
+    // private List<ChiTietPhieuXuat> chiTietPhieuXuats = new ArrayList<>();
 
-    @OneToMany(mappedBy = "xe")
-    private List<ChiTietPhieuNhap> chiTietPhieuNhaps = new ArrayList<>();
+    // @OneToMany(mappedBy = "xe")
+    // private List<ChiTietPhieuNhap> chiTietPhieuNhaps = new ArrayList<>();
 
     public Integer getMaXe() {
         return maXe;

@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "ChiTietYeuCau")
 @IdClass(ChiTietYeuCau.ChiTietYeuCauId.class)
-public class ChiTietYeuCau {
+public class ChiTietYeuCau extends GhiNhanThoiGian{
     @Id
     @Column(name = "MaYeuCau")
     private Integer maYeuCau;

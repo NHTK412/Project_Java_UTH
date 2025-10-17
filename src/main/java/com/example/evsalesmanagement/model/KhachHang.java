@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "KhachHang")
-public class KhachHang {
+public class KhachHang extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaKhachHang")
@@ -42,17 +42,17 @@ public class KhachHang {
     @Column(name = "HangThanhVien")
     private String hangThanhVien;
 
-    @Column(name = "NgayTao")
-    private LocalDateTime ngayTao;
+    // @Column(name = "NgayTao")
+    // private LocalDateTime ngayTao;
 
-    @OneToMany(mappedBy = "khachHang")
-    private List<DonHang> donHangs = new ArrayList<>();
+    // @OneToMany(mappedBy = "khachHang")
+    // private List<DonHang> donHangs = new ArrayList<>();
 
-    @OneToMany(mappedBy = "khachHang")
-    private List<PhanHoi> phanHois = new ArrayList<>();
+    // @OneToMany(mappedBy = "khachHang")
+    // private List<PhanHoi> phanHois = new ArrayList<>();
 
-    @OneToMany(mappedBy = "khachHang")
-    private List<LichHenLaiThu> lichHenLaiThus = new ArrayList<>();
+    // @OneToMany(mappedBy = "khachHang")
+    // private List<LichHenLaiThu> lichHenLaiThus = new ArrayList<>();
 
     public Integer getMaKhachHang() {
         return maKhachHang;
@@ -118,11 +118,11 @@ public class KhachHang {
         this.hangThanhVien = hangThanhVien;
     }
 
-    public LocalDateTime getNgayTao() {
-        return ngayTao;
-    }
+    // public LocalDateTime getNgayTao() {
+    //     return ngayTao;
+    // }
 
-    public void setNgayTao(LocalDateTime ngayTao) {
-        this.ngayTao = ngayTao;
-    }
+    // public void setNgayTao(LocalDateTime ngayTao) {
+    //     this.ngayTao = ngayTao;
+    // }
 }
