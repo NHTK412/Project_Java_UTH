@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "PhanHoi")
-public class PhanHoi {
+public class PhanHoi extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaPhanHoi")
@@ -26,8 +26,8 @@ public class PhanHoi {
     @Column(name = "NoiDungPhanHoi")
     private String noiDungPhanHoi;
 
-    @Column(name = "ThoiGian")
-    private LocalDateTime thoiGian;
+    // @Column(name = "ThoiGian")
+    // private LocalDateTime thoiGian;
 
     @Column(name = "TrangThai")
     private String trangThai;
@@ -36,8 +36,8 @@ public class PhanHoi {
     @JoinColumn(name = "MaKhachHang")
     private KhachHang khachHang;
 
-    @OneToOne(mappedBy = "phanHoi")
-    private XuLyPhanHoi xuLyPhanHoi;
+    // @OneToOne(mappedBy = "phanHoi")
+    // private XuLyPhanHoi xuLyPhanHoi;
 
     public Integer getMaPhanHoi() {
         return maPhanHoi;
@@ -63,13 +63,13 @@ public class PhanHoi {
         this.noiDungPhanHoi = noiDungPhanHoi;
     }
 
-    public LocalDateTime getThoiGian() {
-        return thoiGian;
-    }
+    // public LocalDateTime getThoiGian() {
+    //     return thoiGian;
+    // }
 
-    public void setThoiGian(LocalDateTime thoiGian) {
-        this.thoiGian = thoiGian;
-    }
+    // public void setThoiGian(LocalDateTime thoiGian) {
+    //     this.thoiGian = thoiGian;
+    // }
 
     public String getTrangThai() {
         return trangThai;

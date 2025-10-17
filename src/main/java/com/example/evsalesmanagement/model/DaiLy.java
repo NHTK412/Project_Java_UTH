@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "DaiLy")
-public class DaiLy {
+public class DaiLy extends GhiNhanThoiGian {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaDaiLy")
@@ -35,26 +35,26 @@ public class DaiLy {
     @Column(name = "TrangThai")
     private String trangThai;
 
-    @OneToMany(mappedBy = "daiLy")
-    private List<NhanVien> nhanViens = new ArrayList<>();
+    // @OneToMany(mappedBy = "daiLy")
+    // private List<NhanVien> nhanViens = new ArrayList<>();
 
-    @OneToMany(mappedBy = "daiLy")
-    private List<Xe> xes = new ArrayList<>();
+    // @OneToMany(mappedBy = "daiLy")
+    // private List<Xe> xes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "daiLy")
-    private List<DonHang> donHangs = new ArrayList<>();
+    // @OneToMany(mappedBy = "daiLy")
+    // private List<DonHang> donHangs = new ArrayList<>();
 
-    @OneToMany(mappedBy = "daiLy")
-    private List<PhieuNhapKho> phieuNhapKhos = new ArrayList<>();
+    // @OneToMany(mappedBy = "daiLy")
+    // private List<PhieuNhapKho> phieuNhapKhos = new ArrayList<>();
 
-    @OneToMany(mappedBy = "daiLy")
-    private List<GiaSiDaiLy> giaSiDaiLys = new ArrayList<>();
+    // @OneToMany(mappedBy = "daiLy")
+    // private List<GiaSiDaiLy> giaSiDaiLys = new ArrayList<>();
 
-    @OneToMany(mappedBy = "daiLy")
-    private List<ChinhSachChietKhau> chinhSachChietKhaus = new ArrayList<>();
+    // @OneToMany(mappedBy = "daiLy")
+    // private List<ChinhSachChietKhau> chinhSachChietKhaus = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "daiLys")
-    private List<KhuyenMai> khuyenMais = new ArrayList<>();
+    // @ManyToMany(mappedBy = "daiLys")
+    // private List<KhuyenMai> khuyenMais = new ArrayList<>();
 
     public Integer getMaDaiLy() {
         return maDaiLy;

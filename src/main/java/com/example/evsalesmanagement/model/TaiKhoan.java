@@ -13,7 +13,7 @@ import jakarta.persistence.OneToOne;
 
 @Entity
 @Table(name = "TaiKhoan")
-public class TaiKhoan {
+public class TaiKhoan extends GhiNhanThoiGian {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaTaiKhoan")
@@ -31,8 +31,8 @@ public class TaiKhoan {
     @Column(name = "TrangThai")
     private String trangThai;
 
-    @Column(name = "NgayTao")
-    private LocalDateTime ngayTao;
+    // @Column(name = "NgayTao")
+    // private LocalDateTime ngayTao;
 
     @Column(name = "LanDangNhapCuoi")
     private LocalDateTime lanDangNhapCuoi;
@@ -81,13 +81,13 @@ public class TaiKhoan {
         this.trangThai = trangThai;
     }
 
-    public LocalDateTime getNgayTao() {
-        return ngayTao;
-    }
+    // public LocalDateTime getNgayTao() {
+    // return ngayTao;
+    // }
 
-    public void setNgayTao(LocalDateTime ngayTao) {
-        this.ngayTao = ngayTao;
-    }
+    // public void setNgayTao(LocalDateTime ngayTao) {
+    // this.ngayTao = ngayTao;
+    // }
 
     public LocalDateTime getLanDangNhapCuoi() {
         return lanDangNhapCuoi;

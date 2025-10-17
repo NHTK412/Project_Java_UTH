@@ -17,7 +17,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "ChiTietLoaiXe")
-public class ChiTietLoaiXe {
+public class ChiTietLoaiXe extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaChiTietLoaiXe")
@@ -45,20 +45,20 @@ public class ChiTietLoaiXe {
     @JoinColumn(name = "MaLoaiXe")
     private LoaiXe loaiXe;
 
-    @OneToMany(mappedBy = "chiTietLoaiXe")
-    private List<Xe> xes = new ArrayList<>();
+    // @OneToMany(mappedBy = "chiTietLoaiXe")
+    // private List<Xe> xes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "chiTietLoaiXe")
-    private List<ChiTietBaoGia> chiTietBaoGias = new ArrayList<>();
+    // @OneToMany(mappedBy = "chiTietLoaiXe")
+    // private List<ChiTietBaoGia> chiTietBaoGias = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "chiTietLoaiXes")
-    private List<KhuyenMai> khuyenMais = new ArrayList<>();
+    // @ManyToMany(mappedBy = "chiTietLoaiXes")
+    // private List<KhuyenMai> khuyenMais = new ArrayList<>();
 
-    @OneToMany(mappedBy = "chiTietLoaiXe")
-    private List<GiaSiDaiLy> giaSiDaiLys = new ArrayList<>();
+    // @OneToMany(mappedBy = "chiTietLoaiXe")
+    // private List<GiaSiDaiLy> giaSiDaiLys = new ArrayList<>();
 
-    @OneToMany(mappedBy = "chiTietLoaiXe")
-    private List<ChiTietYeuCau> chiTietYeuCaus = new ArrayList<>();
+    // @OneToMany(mappedBy = "chiTietLoaiXe")
+    // private List<ChiTietYeuCau> chiTietYeuCaus = new ArrayList<>();
 
     public Integer getMaChiTietLoaiXe() {
         return maChiTietLoaiXe;
@@ -124,6 +124,7 @@ public class ChiTietLoaiXe {
         this.hinhAnhXe = hinhAnhXe;
     }
 
+<<<<<<< HEAD
     public List<Xe> getXes() {
         return xes;
     }
@@ -163,4 +164,6 @@ public class ChiTietLoaiXe {
     public void setChiTietYeuCaus(List<ChiTietYeuCau> chiTietYeuCaus) {
         this.chiTietYeuCaus = chiTietYeuCaus;
     }
+=======
+>>>>>>> origin/master
 }

@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "LoaiXe")
-public class LoaiXe {
+public class LoaiXe extends GhiNhanThoiGian{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MaLoaiXe")
@@ -29,11 +29,11 @@ public class LoaiXe {
     @Column(name = "MoTa")
     private String moTa;
 
-    @ManyToMany(mappedBy = "loaiXes")
-    private List<DanhMucXe> danhMucXes = new ArrayList<>();
+    // @ManyToMany(mappedBy = "loaiXes")
+    // private List<DanhMucXe> danhMucXes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "loaiXe")
-    private List<ChiTietLoaiXe> chiTietLoaiXes = new ArrayList<>();
+    // @OneToMany(mappedBy = "loaiXe")
+    // private List<ChiTietLoaiXe> chiTietLoaiXes = new ArrayList<>();
 
     public Integer getMaLoaiXe() {
         return maLoaiXe;
